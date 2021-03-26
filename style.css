@@ -1,0 +1,287 @@
+/*GLOBAL ======================================*/
+
+:root{
+    --dark-white: rgb(218, 225, 226);
+    --green:#49AA26; 
+    --dark-blue:#363f5f;
+}
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 93.75%;
+}
+
+body {
+    background-color:var(--dark-white);
+    font-family: "Poppins",sans-serif;
+    
+}
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.container{
+    width: min(90vw, 800px);
+    margin: auto;
+}
+
+/*TITLES ======================================*/
+
+h2{
+    margin-top: 3.2rem;
+    margin-bottom:0.8rem;
+    color: white;
+    font-weight: normal;
+}
+
+/*Links & Buttons =============================================*/
+
+a{
+    color: #12a454;
+    text-decoration: none;
+}
+a:hover{
+    opacity:0.;
+    color: #6ee7a1
+}
+button{
+    width:100%;
+    height:50px;
+    border:none;
+    color: white;
+    background-color:var(--green);
+    padding:0;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+button:hover{
+    background-color:var(--dark-blue)
+}
+.button.new{
+    display:inline-block;
+    margin-bottom: .8rem;
+}
+.button.cancel{
+    color: #e92929;
+    border: 2px solid #e92929;
+    border-radius: 0.25rem;
+    height:50px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    opacity: 0.6;
+}
+/*HEADER ======================================*/
+header {
+    background: url(./assets/abstract-green-gradient-bs.jpg);
+    width:auto;
+    background-size: cover;
+    background-position: auto;
+    padding: 5rem 0;
+    text-align: center;
+    background-color: #1f1f20;
+    padding:1.5rem 2rem;
+   
+}
+
+#logo{
+    margin-top: 4rem;
+    color: #fff;
+    font-weight: 200;
+    margin-bottom: 7rem;
+    
+}
+
+/*BALANCE ======================================*/
+#balance{
+
+    margin-top:-5rem;
+}
+
+#balance h2{
+    color: white;
+}
+
+/*CARDS ======================================*/
+
+.card{
+    background:white;
+    padding:1.5rem 2rem;
+    border-radius: 0.25rem;
+    margin-bottom: 2rem;
+    color:rgb(71, 72, 102);
+    
+}
+.card h3{
+    font-weight:normal;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.card p{
+    font-size: 2rem;
+    line-height:3rem;
+    margin-top: 1rem;
+}
+
+.card.total{
+    background: url(/assets/abstract-green-gradient-bs.jpg);
+    background-size:cover;
+    background-position:auto;
+    color: white;
+
+}
+
+/*TABLE ======================================*/
+
+#transaction{
+    display: block;
+    width: 100%;
+    overflow-x:auto;
+}
+
+#data-tables{
+    width: 100%;
+    border-spacing:0 0.5rem;
+    color:rgba(59, 61, 70, 0.65);
+
+
+}
+
+
+
+table th{
+    background-color:white;
+    font-weight: 200;
+    padding:1rem 2rem;
+    text-align:left;
+    border-radius: 0.25rem;
+}
+
+table tbody tr{
+    opacity:0.7;
+}
+table tbody tr:hover{
+    opacity:1;
+
+}
+table tbody td{
+    background-color:white;
+    border-radius: 0.25rem;
+    padding:1rem 2rem;
+}
+
+td.description{
+    color:rgba(2, 2, 2, 0.658)
+}
+
+td.income{
+    color:#12a454
+}
+
+td.expense{
+    color: #e92929;
+}
+
+.minus{
+    cursor: pointer;
+}
+
+/*MODAL ======================================*/
+
+.modal-overlay {
+    width:100%;
+    height:100%;
+    background-color: rgba(5, 32, 68, 0.5);
+    position:fixed;
+    top: 0;
+   
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    visibility: hidden;
+    z-index: 999;
+}
+.modal-overlay.active{
+    opacity:0.95;
+    visibility: visible;
+}
+.modal{
+    background: #f0f2f5;
+    padding:2.4rem;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    z-index: 1;
+}
+
+/*FORM ======================================*/
+#form{
+    max-width: 500px;
+}
+#form h2{
+    margin-top:0;
+    color: var(--dark-blue);
+}
+input{
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.8rem;
+    width: 100%;
+}
+.input-group{
+    margin-top: 0.8rem;
+}
+.input-group small{
+    opacity:0.4;
+}
+.input-group.actions{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+  
+}
+
+.input-group.actions .button,
+.input-group.actions button {
+    width: 48%;
+}
+/*FOOTER ======================================*/
+.foot{
+    text-align:center;
+    padding: 4rem 2rem;
+    opacity: 0.5;
+
+}
+
+/*RESPONSIVE ======================================*/
+@media (min-width:800px){
+    html{
+        font-size:87.5%
+    }
+
+    #balance{
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+    }
+}
